@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Get
-Route::get('/article', [PostsController::class, 'index'])->name('blog.index');
+Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
 Route::get('/blog/{id}', [PostsController::class, 'show'])->name('blog.show');
 // Route::get('/blog/{id?}', [PostsController::class, 'show']); // Optional route parameter
 
