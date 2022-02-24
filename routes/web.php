@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    //Return config values
-    dd(config('services.mailgun.domain'));
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     //Return config values
+//     dd(config('services.mailgun.domain'));
+//     return view('welcome');
+// });
+
+// One single route
+// Route::get('blog', [PostsController::class, 'index']);
+
+// Resource route for all CRUD operations
+Route::resource('blog', PostsController::class);
