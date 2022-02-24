@@ -36,6 +36,23 @@ Route::delete('/blog/{id}', [PostsController::class, 'destroy']);
 // Route for single action controllers
 Route::get('/', HomeController::class);
 
+/* 
+    Routes with regex expressions
+    Route::get('/blog/{id}', [PostsController::class, 'show'])->where('id', '[0-9]+);
+    Route::get('/blog/{name}', [PostsController::class, 'show'])->where('name', '[A-Za-z]+);
+    Route::get('/blog/{id}/{name}', [PostsController::class, 'show'])->where([
+        'id' => '[0-9]+',
+        'name' => '[A-Za-z]+',
+    ]);
+    
+    Laravel Method Helpers
+    Route::get('/blog/{id}', [PostsController::class, 'show'])->whereNumber('id');
+    Route::get('/blog/{name}', [PostsController::class, 'show'])->whereAlpha('name');
+    Route::get('/blog/{id}/{name}', [PostsController::class, 'show'])
+        ->whereNumber('id')
+        ->whereAlpha('name');
+*/
+
 // Route with multiple methods
 // Route::get(['GET', 'POST'], '/', [PostsController::class, 'index']);
 
