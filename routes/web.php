@@ -16,18 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 // Get
 Route::get('/blog', [PostsController::class, 'index']);
-Route::get('/blog/1', [PostsController::class, 'show']);
+Route::get('/blog/{id}', [PostsController::class, 'show']);
+// Route::get('/blog/{id?}', [PostsController::class, 'show']); // Optional route parameter
 
 //Post
 Route::get('/blog/create', [PostsController::class, 'create']);
 Route::post('/blog', [PostsController::class, 'store']);
 
 // PUT & PATCH
-Route::get('/blog/edit/1', [PostsController::class, 'edit']);
-Route::patch('/blog/1', [PostsController::class, 'update']);
+Route::get('/blog/edit/{id}', [PostsController::class, 'edit']);
+Route::patch('/blog/{id}', [PostsController::class, 'update']);
 
 // Delete
-Route::delete('/blog/1', [PostsController::class, 'destroy']);
+Route::delete('/blog/{id}', [PostsController::class, 'destroy']);
 
 // Resource route for all CRUD operations
 // Route::resource('blog', PostsController::class);
