@@ -42,10 +42,11 @@ class PostsController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * Optional route parameter needs to have a default value eg: $id = 1
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**
