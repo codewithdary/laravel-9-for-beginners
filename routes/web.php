@@ -14,27 +14,39 @@ use Illuminate\Support\Facades\Route;
     OPTIONS - Ask the server which verbs are allowed 
 */
 
-// Get
-Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
-Route::get('/blog/{id}', [PostsController::class, 'show'])->name('blog.show');
-// Route::get('/blog/{id?}', [PostsController::class, 'show']); // Optional route parameter
-
-//Post
-Route::get('/blog/create', [PostsController::class, 'create'])->name('blog.create');
-Route::post('/blog', [PostsController::class, 'store'])->name('blog.store');
-
-// PUT & PATCH
-Route::get('/blog/edit/{id}', [PostsController::class, 'edit'])->name('blog.edit');
-Route::patch('/blog/{id}', [PostsController::class, 'update'])->name('blog.update');
-
-// Delete
-Route::delete('/blog/{id}', [PostsController::class, 'destroy'])->name('blog.destroy');
+Route::prefix('blog')->group(function () {
+    Route::get('/', [PostsController::class, 'index'])->name('blog.index');
+    Route::get('/{id}', [PostsController::class, 'show'])->name('blog.show');
+    Route::get('/create', [PostsController::class, 'create'])->name('blog.create');
+    Route::post('/', [PostsController::class, 'store'])->name('blog.store');
+    Route::get('/edit/{id}', [PostsController::class, 'edit'])->name('blog.edit');
+    Route::patch('/{id}', [PostsController::class, 'update'])->name('blog.update');
+    Route::delete('/{id}', [PostsController::class, 'destroy'])->name('blog.destroy');
+});
 
 // Resource route for all CRUD operations
 // Route::resource('blog', PostsController::class);
 
 // Route for single action controllers
 Route::get('/', HomeController::class);
+
+/*
+    Get
+    Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
+    Route::get('/blog/{id}', [PostsController::class, 'show'])->name('blog.show');
+    Route::get('/blog/{id?}', [PostsController::class, 'show']); // Optional route parameter
+
+    Post
+    Route::get('/blog/create', [PostsController::class, 'create'])->name('blog.create');
+    Route::post('/blog', [PostsController::class, 'store'])->name('blog.store');
+
+    PUT & PATCH
+    Route::get('/blog/edit/{id}', [PostsController::class, 'edit'])->name('blog.edit');
+    Route::patch('/blog/{id}', [PostsController::class, 'update'])->name('blog.update');
+
+    Delete
+    Route::delete('/blog/{id}', [PostsController::class, 'destroy'])->name('blog.destroy');
+*/
 
 /* 
     Routes with regex expressions
