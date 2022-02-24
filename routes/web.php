@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,6 @@ use Illuminate\Support\Facades\Route;
 
 // Resource route for all CRUD operations
 Route::resource('blog', PostsController::class);
+
+// Route for single action controllers
+Route::get('/', HomeController::class);
