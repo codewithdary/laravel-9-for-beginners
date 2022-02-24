@@ -15,20 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Get
-Route::get('/blog', [PostsController::class, 'index']);
-Route::get('/blog/{id}', [PostsController::class, 'show']);
+Route::get('/article', [PostsController::class, 'index'])->name('blog.index');
+Route::get('/blog/{id}', [PostsController::class, 'show'])->name('blog.show');
 // Route::get('/blog/{id?}', [PostsController::class, 'show']); // Optional route parameter
 
 //Post
-Route::get('/blog/create', [PostsController::class, 'create']);
-Route::post('/blog', [PostsController::class, 'store']);
+Route::get('/blog/create', [PostsController::class, 'create'])->name('blog.create');
+Route::post('/blog', [PostsController::class, 'store'])->name('blog.store');
 
 // PUT & PATCH
-Route::get('/blog/edit/{id}', [PostsController::class, 'edit']);
-Route::patch('/blog/{id}', [PostsController::class, 'update']);
+Route::get('/blog/edit/{id}', [PostsController::class, 'edit'])->name('blog.edit');
+Route::patch('/blog/{id}', [PostsController::class, 'update'])->name('blog.update');
 
 // Delete
-Route::delete('/blog/{id}', [PostsController::class, 'destroy']);
+Route::delete('/blog/{id}', [PostsController::class, 'destroy'])->name('blog.destroy');
 
 // Resource route for all CRUD operations
 // Route::resource('blog', PostsController::class);
