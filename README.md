@@ -2,7 +2,7 @@
 
 Every chapter has its own associated repository. The repository will start with the episode number followed by the name. Example: ```12-named-routes```.
 
-This repository is linked to [the following YouTube playlist]() where we will be covering all topics that are needed to become a Laravel developer.
+This repository is linked to [the following YouTube playlist](https://www.youtube.com/playlist?list=PLFHz2csJcgk_mM2jEf7t8P678O_jz83on) where we will be covering all topics that are needed to become a Laravel developer.
 
 •	Author: [Code With Dary](https://github.com/codewithdary/) <br>
 •	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
