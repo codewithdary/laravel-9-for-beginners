@@ -42,7 +42,6 @@ This repository is linked to [the following YouTube playlist]() where we will be
 | Ep. 13        | Route Groups in Laravel |
 | Ep. 14        | Route Prefixes in Laravel |
 | Ep. 15        | How to use fallback routes in Laravel |
-| Ep. 16        | How to redirect routes in Laravel |
 
 # Credits due where credits due…
 Thanks to [Laravel](https://laravel.com/) for giving me the opportunity to make this tutorial on [Laravel!](https://laravel.com/docs/9.x/)
