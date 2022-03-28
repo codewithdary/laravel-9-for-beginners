@@ -43,5 +43,10 @@ This repository is linked to [the following YouTube playlist](https://www.youtub
 | Ep. 14        | Route Prefixes in Laravel |
 | Ep. 15        | How to use fallback routes in Laravel |
 
+## Database & Eloquent
+| Ep. 16        | How to setup a database in Laravel |
+| Ep. 17        | Introduction to Migrations |
+| Ep. 18        | Seeding in Laravel |
+
 # Credits due where credits due…
 Thanks to [Laravel](https://laravel.com/) for giving me the opportunity to make this tutorial on [Laravel!](https://laravel.com/docs/9.x/)
