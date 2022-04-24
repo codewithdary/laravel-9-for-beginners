@@ -14,10 +14,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = DB::table('posts')
-            ->avg('min_to_read');
-
-        dd($posts);
+        DB::transaction(function () {
+            
+        });
 
         return view('blog.index');
     }
