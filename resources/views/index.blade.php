@@ -10,5 +10,7 @@
     <h1 class="text-3xl p-2 font-bold">
         Tailwind 3.0
     </h1>
+
+    {{ config('database.connections.sqlite.test.key') }}
 </body>
 </html>
